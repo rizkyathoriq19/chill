@@ -72,22 +72,27 @@
     --border-color: hsla(250, 81%, 94%, 0.23);
     --placeholder-color: hsla(220, 2%, 76%, 1);
     --bg-color: hsla(210, 10%, 10%, 0.839);
+
     --body-font: "Lato", serif;
     --title-font: "Londrina Solid", serif;
+
     --h1-font-size: 3rem;
     --h2-font-size: 2.5rem;
     --h3-font-size: 2rem;
     --h4-font-size: 1.5rem;
     --h5-font-size: 1.25rem;
     --h6-font-size: 1.125rem;
+
     --body-lg-font-size: 1.125rem;
     --body-md-font-size: 1rem;
     --body-sm-font-size: .875rem;
     --caption1-font-size: .75rem;
     --caption2-font-size: .625rem;
+
     --p-font-size: 1rem;
     --normal-font-size: 1rem;
     --small-font-size: .813rem;
+    
     --font-bold: 900;
     --font-semibold: 700;
     --font-medium: 400;
