@@ -1,0 +1,367 @@
+@import url("../styles/global.css");
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body, input, button {
+    font-size: var(--normal-font-size);
+    font-family: var(--body-font);
+}
+
+body {
+    color: var(--white-color);
+}
+
+input, button {
+    border: none;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+.login {
+    position: relative;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+}
+
+.login__logo {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.login__logo-icon {
+    width: 50px;
+    height: 44px; 
+    fill: var(--white-color);
+}
+
+.login__logo h1 {
+    font-size: 3.125rem;
+    font-family: var(--title-font);
+    font-weight: var(--font-medium);
+}
+
+.login__image {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+.login__form {
+    position: relative;
+    background-color: var(--bg-color);
+    margin-inline: 1.5rem;
+    padding: 2.5rem 1.5rem;
+    border-radius: 1rem;
+}
+
+.login__title h3{
+    text-align: center;
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-large);
+}
+
+.login__title p{
+    text-align: center;
+    font-size: var(--body-md-font-size);
+    font-weight: var(--font-reguler);
+    margin-bottom: 2rem;
+}
+
+.login__box {
+    display: grid;
+    align-items: center;
+}
+
+.login__icon, .login__eye {
+    font-size: 1.25rem;
+}
+
+.login__box:first-child .login__box-input{
+    position: relative; 
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 2rem; 
+}
+
+.login__label {
+    display: block;
+    font-size: var(--body-lg-font-size);
+    font-weight: var(--font-medium);
+    color: var(--white-color);
+}
+
+.login__password-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.login__input {
+    width: 100%;
+    padding: 0.5rem 2.5rem 0.5rem 1rem; 
+    background: none;
+    color: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4rem;
+    box-sizing: border-box;
+    caret-color: var(--white-color);
+}
+
+.login__eye {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 16px;
+    height: 16px; 
+    fill: var(--placeholder-color);
+}
+
+.login__register {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    font-size: var(--small-font-size);
+}
+
+.login__register-text {
+    color:var(--text-light-secondary);
+    font-size: var(--body-sm-font-size);
+    font-weight: var(--font-reguler);
+}
+.login__register-link, .login__forgot {
+    color: var(--text-light-primary);
+    font-size: var(--body-md-font-size);
+    font-weight: var(--font-reguler);
+}
+
+.login__register-link:hover, .login__forgot:hover {
+    text-decoration: underline;
+}
+
+.login__submit {
+    font-weight: var(--font-medium);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login__submit-separator {
+    color: var(--placeholder-color);
+    font-size: var(--small-font-size);
+} 
+
+.login__submit-btn {
+    background-color: var(--btn-color);
+    color: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4rem;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login__submit-btn-google {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    color: var(--white-color);
+    padding: 0.5rem 1rem;
+    width: 100%;
+    height: 50px;
+    background: none;
+    border: 1px solid var(--border-color);
+    border-radius: 4rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login__submit-btn:hover {
+    background-color: var(--bg-color); 
+}
+
+.login__submit-btn-google:hover {
+    background-color: var(--btn-color); 
+}
+
+.google-icon {
+    margin-right: 0.75rem; 
+    width: 20px;
+    height: 20px; 
+}
+
+.login__input:focus + .login__label,
+.login__input:not(:placeholder-shown) + .login__label {
+    top: -12px;
+    font-size: var(--body-md-font-size);
+    font-weight: var(--font-reguler);
+    color: var(--text-light-secondary);
+}
+
+@media screen and (max-width: 360px) {
+    .login {
+        padding: 0.5rem;
+    }
+
+    .login__form {
+        width: calc(100% - 1rem); /* Fluid width dengan padding */
+        max-width: 306px; /* Maximum width */
+        height: 384px;
+        padding: 1.25rem;
+        margin: 0 auto;
+    }
+
+    .login__logo {
+        margin-bottom: 0.5rem;
+    }
+
+    .login__logo-icon {
+        width: 24px;
+        height: 20px;
+    }
+
+    .login__logo h1 {
+        font-size: 1.5rem; 
+    }
+
+    .login__title {
+        margin-bottom: 0.75rem;
+    }
+
+    .login__title h1 {
+        font-size: 0.875rem; 
+        margin-bottom: 0.25rem;
+    }
+
+    .login__title p {
+        font-size: 0.625rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .login__box {
+        gap: 0.5rem;
+    }
+
+    .login__box:first-child .login__box-input {
+        margin-bottom: 0.75rem;
+    }
+
+    .login__label {
+        font-size: 0.625rem;
+    }
+
+    .login__input {
+        height: 28px;
+        font-size: 0.625rem; 
+        padding: 0.25rem 2rem 0.25rem 0.75rem;
+    }
+
+    .login__input::placeholder {
+        font-size: 0.625rem; 
+    }
+
+    .login__eye {
+        width: 12px;
+        height: 12px;
+        right: 10px;
+    }
+
+    .login__register {
+        font-size: 0.5rem; 
+    }
+
+    .login__submit {
+        padding: 0.5rem 0;
+        gap: 0.5rem;
+    }
+
+    .login__submit-btn,
+    .login__submit-btn-google {
+        height: 28px;
+        font-size: 0.625rem;
+        padding: 0 0.75rem;
+        min-height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .login__submit-separator {
+        font-size: 0.5rem; 
+    }
+
+    .google-icon {
+        width: 14px;
+        height: 14px;
+        margin-right: 0.5rem;
+    }
+
+    .login__register-text,
+    .login__forgot {
+        font-size: 0.5rem; 
+    }
+
+    .login__box-input {
+        margin-bottom: 0.6rem;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .login {
+        justify-content: center;
+    }
+
+    .login__logo-icon {
+        width: 3.25rem;
+        height: 2.25rem;
+    }
+
+    .login__form {
+        width: 529px;
+        height: 663px;
+        padding: 2.5rem;
+    }
+
+    .login__label {
+        margin-bottom: 0.5rem;
+    }
+
+    .login__box:last-child .login__box-input{
+    margin-bottom: .75rem;
+    }
+
+    .login__submit {
+        margin-top: 2rem;
+    }
+    
+    .login__submit-btn {
+        margin-bottom: 0.5rem;
+    }
+
+    .login__submit-btn-google {
+        margin-top: 0.5rem;
+    }
+
+}
+
