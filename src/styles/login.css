@@ -7,7 +7,7 @@
 }
 
 body, input, button {
-    font-size: var(--normal-font-size);
+    font-size: var(--body-md-font-size);
     font-family: var(--body-font);
 }
 
@@ -119,9 +119,10 @@ img {
     padding: 0.5rem 2.5rem 0.5rem 1rem; 
     background: none;
     color: var(--text-light-primary);
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--other-outline-border);
     border-radius: 4rem;
     box-sizing: border-box;
+    text-align: left;
     caret-color: var(--text-light-primary);
 }
 
@@ -133,7 +134,7 @@ img {
     cursor: pointer;
     width: 16px;
     height: 16px; 
-    fill: var(--placeholder-color);
+    fill: var(--text-light-secondary);
 }
 
 .login__register {
@@ -141,7 +142,7 @@ img {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 0.75rem;
-    font-size: var(--small-font-size);
+    font-size: var(--body-sm-font-size);
 }
 
 .login__register-text {
