@@ -89,10 +89,6 @@ img {
     align-items: center;
 }
 
-.login__eye {
-    font-size: 1.25rem;
-}
-
 .login__box:first-child .login__box-input{
     position: relative; 
     display: inline-block;
@@ -202,7 +198,7 @@ img {
 }
 
 .login__submit-btn-google:hover {
-    background-color: var(--btn-color); 
+    background-color: var(--other-extra-bg); 
 }
 
 .google-icon {
@@ -213,7 +209,7 @@ img {
 
 @media screen and (max-width: 360px) {
     .login {
-        padding: 0.5rem;
+        padding: .5rem;
     }
 
     .login__form {
@@ -251,7 +247,7 @@ img {
     .login__title p {
         font-size: var(--caption2-font-size); 
         font-weight: var(--font-reguler);
-        margin-bottom: 0.75rem;
+        margin-bottom: .75rem;
     }
 
     .login__box:first-child .login__box-input {
