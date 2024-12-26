@@ -12,8 +12,8 @@
         
         <form action="" class="register__form">
             <div class="register__logo">
-                <svg class="register__logo-icon" xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24">
-                <path d="M13.848,8.297L19.111,.037c.795-.079,1.546,.148,2.137,.598l-4.266,6.843-3.134,.819Zm-2.846,.743L16.287,.747l-3.179,.862L7.824,9.87l3.178-.83Zm12.159-3.177l-.755-3.305-2.608,4.184,3.363-.879ZM2.355,4.523C.74,4.879-.285,6.482,.072,8.105l.417,1.826,3.793-5.93-1.927,.522Zm1.145,6.477l1.472-.385L10.235,2.387l-3.079,.835L2.181,11H1v13H24V11H3.5Z"/>
+                <svg class="register__logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M13.848,8.297L19.111,.037c.795-.079,1.546,.148,2.137,.598l-4.266,6.843-3.134,.819Zm-2.846,.743L16.287,.747l-3.179,.862L7.824,9.87l3.178-.83Zm12.159-3.177l-.755-3.305-2.608,4.184,3.363-.879ZM2.355,4.523C.74,4.879-.285,6.482,.072,8.105l.417,1.826,3.793-5.93-1.927,.522Zm1.145,6.477l1.472-.385L10.235,2.387l-3.079,.835L2.181,11H1v13H24V11H3.5Z"/>
                 </svg>
                 <h1>CHILL</h1>
             </div>
@@ -24,7 +24,6 @@
             </div>
 
             <div class="register__content">
-
                 <div class="register__box">
                     <div class="register__box-input">
                         <label for="username" class="register__label">Username</label>
@@ -34,7 +33,7 @@
     
                 <div class="register__box">
                     <div class="register__box-input">
-                        <label for="username" class="register__label">Kata Sandi</label>
+                        <label for="password" class="register__label">Kata Sandi</label>
                         <div class="register__password-wrapper">
                             <input type="password" id="password" required class="register__input" placeholder="Masukkan kata sandi">
                             <svg id="togglePassword" class="register__eye" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -47,10 +46,10 @@
     
                 <div class="register__box">
                     <div class="register__box-input">
-                        <label for="username" class="register__label">Konfirmasi Kata Sandi</label>
+                        <label for="password-confirm" class="register__label">Konfirmasi Kata Sandi</label>
                         <div class="register__password-wrapper">
                             <input type="password" id="password-confirm" required class="register__input" placeholder="Masukkan kata sandi">
-                            <svg id="togglePassword" class="register__eye" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg id="togglePasswordConfirm" class="register__eye" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M16 16H13L10.8368 13.3376C9.96488 13.7682 8.99592 14 8 14C6.09909 14 4.29638 13.1557 3.07945 11.6953L0 8L3.07945 4.30466C3.14989 4.22013 3.22229 4.13767 3.29656 4.05731L0 0H3L16 16ZM5.35254 6.58774C5.12755 7.00862 5 7.48941 5 8C5 9.65685 6.34315 11 8 11C8.29178 11 8.57383 10.9583 8.84053 10.8807L5.35254 6.58774Z"/>
                                 <path d="M16 8L14.2278 10.1266L7.63351 2.01048C7.75518 2.00351 7.87739 2 8 2C9.90091 2 11.7036 2.84434 12.9206 4.30466L16 8Z"/>
                             </svg>
@@ -58,12 +57,9 @@
                     </div>
                 </div>
             </div>
-                
 
             <div class="register__login">
-                <div class="register__login-check">
-                    <span class="register__login-text">Sudah punya akun? <a href="#" class="register__login-link">Masuk</a></span>
-                </div>
+                <span class="register__login-text">Sudah punya akun? <a href="#" class="register__login-link">Masuk</a></span>
             </div>
 
             <div class="register__submit">
@@ -73,8 +69,28 @@
                     <img src="../public/google-icon.png" alt="google icon" class="google-icon">Daftar dengan Google
                 </button>
             </div>
-
         </form>
-    </div>  
+    </div> 
+
+    <script>
+        const togglePassword = document.getElementById('togglePassword');
+        const passwordInput = document.getElementById('password');
+        const togglePasswordConfirm = document.getElementById('togglePasswordConfirm');
+        const passwordConfirmInput = document.getElementById('password-confirm');
+
+        function toggleInputVisibility(input, toggleButton) {
+            const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
+            input.setAttribute('type', type);
+            toggleButton.innerHTML = type === 'text' ? `
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 8L3.07945 4.30466C4.29638 2.84434 6.09909 2 8 2C9.90091 2 11.7036 2.84434 12.9206 4.30466L16 8L12.9206 11.6953C11.7036 13.1557 9.90091 14 8 14C6.09909 14 4.29638 13.1557 3.07945 11.6953L0 8ZM8 11C9.65685 11 11 9.65685 11 8C11 6.34315 9.65685 5 8 5C6.34315 5 5 6.34315 5 8C5 9.65685 6.34315 11 8 11Z"/>
+            ` : `
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M16 16H13L10.8368 13.3376C9.96488 13.7682 8.99592 14 8 14C6.09909 14 4.29638 13.1557 3.07945 11.6953L0 8L3.07945 4.30466C3.14989 4.22013 3.22229 4.13767 3.29656 4.05731L0 0H3L16 16ZM5.35254 6.58774C5.12755 7.00862 5 7.48941 5 8C5 9.65685 6.34315 11 8 11C8.29178 11 8.57383 10.9583 8.84053 10.8807L5.35254 6.58774Z"/>
+                <path d="M16 8L14.2278 10.1266L7.63351 2.01048C7.75518 2.00351 7.87739 2 8 2C9.90091 2 11.7036 2.84434 12.9206 4.30466L16 8Z"/>
+            `;
+        }
+
+        togglePassword.addEventListener('click', () => toggleInputVisibility(passwordInput, togglePassword));
+        togglePasswordConfirm.addEventListener('click', () => toggleInputVisibility(passwordConfirmInput, togglePasswordConfirm));
+    </script>
 </body>
 </html>

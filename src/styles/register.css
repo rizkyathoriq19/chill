@@ -89,7 +89,7 @@ img {
     align-items: center;
 }
 
-.register__box:first-child .register__box-input {
+.register__box:first-child {
     position: relative;
     display: inline-block;
     width: 100%;
@@ -254,7 +254,80 @@ img {
         margin-bottom: .75rem;
     }
 
-    
+    .register__content {
+        margin-bottom: .4rem;
+    }
+
+    .register__box:first-child {
+        margin-bottom: 1rem;
+    }
+
+    .register__box:nth-child(2) {
+        margin-bottom: 1rem;
+    }
+
+    .register__label {
+        font-size: var(--caption2-font-size);
+        font-weight: var(--font-medium);
+        color: var(--text-light-primary);
+        margin-bottom: .5rem;
+    }
+
+    .register__input {
+        height: 28px;
+        font-size: .625rem;
+        padding: .25rem 2rem .25rem .75rem;
+    }
+
+    .register__input::placeholder {
+        font-size: var(--caption2-font-size);
+        font-weight: var(--font-medium);
+    }
+
+    .register__eye {
+        width: 12px;
+        height: 12px;
+        right: 14px;
+    }
+
+    .register__login {
+        font-size: .5rem;
+    }
+
+    .register__submit {
+        padding: .5rem 0;
+        gap: .5rem
+    }
+
+    .register__submit-btn, .register__submit-btn-google {
+        height: 28px;
+        font-size: .625rem;
+        padding: 0 .75rem;
+        min-height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .register__submit-separator {
+        font-size: .5rem;
+    }
+
+    .google-icon {
+        width: 14px;
+        height: 14px;
+        margin-right: .5rem;
+    }
+
+    .register__login-text {
+        font-size: var(--caption2-font-size);
+        font-weight: var(--font-reguler);
+    }
+
+    .register__login-link {
+        font-size: var(--caption2-font-size);
+        font-weight: var(--font-medium);
+    }
 }
 
 @media screen and (min-width: 576px) {
