@@ -58,10 +58,50 @@ nav {
     font-weight: var(--font-lg-medium);
 }
 
+.nav__profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .nav__profile img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
+}
+
+.dropdown__menu {
+    position: absolute;
+    top: 74px;
+    right: 80px;
+    background-color: var(--other-page-header-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    display: none;
+    flex-direction: column;
+    width: 180px;
+}
+
+.dropdown__menu li {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dropdown__menu li i {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.nav__profile:hover .dropdown__menu {
+    display: flex;
+}
+
+.dropdown__menu li:hover {
+    color: var(--primary-default);
 }
 
 main {
@@ -176,13 +216,11 @@ main {
     gap: 32px;
     flex-wrap: wrap;
 }
-
 .movie__container {
     display: flex;
-    justify-content: space-between;
-    overflow-x: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    justify-content: flex-start;
+    gap: 40px;
+    position: relative;
 }
 
 .movie__container::-webkit-scrollbar {
@@ -215,6 +253,8 @@ main {
     display: flex;
     justify-content: space-between;
     padding: 10px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
     background: linear-gradient(to bottom, 
         hsla(0, 0%, 0%, 0), 
         hsla(210, 8%, 7%, 0.86), 
@@ -264,6 +304,35 @@ main {
     height: 28px;
 }
 
+.arrow__left, .arrow__right {
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--other-body-bg);
+    border: .1px solid var(--other-outline-border);
+    cursor: pointer;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.arrow__left:hover, .arrow__right:hover {
+    transform: translateY(-50%) scale(1.1); /* Efek pembesaran saat di-hover */
+}
+
+.arrow__left {
+    left: -20px;
+}
+
+.arrow__right {
+    right: -20px;
+}
+
 footer {
     display: flex;
     max-width: 100vw;
@@ -278,19 +347,33 @@ footer {
     margin-right: 215px;
 }
 
+.title__logo {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.title__logo:first-child .menu__logo-img {
+    font-size: 44px; 
+}
+
 .title h1 {
-    font-size: 24px;
+    font-size:var(--h1-font-size2);
     margin: 0;
 }
 
 .title p {
     margin: 5px 0 0;
-    font-size: 14px;
+    font-size: var(--body-md-font-size);
     font-weight: var(--font-medium);
 }
 
 .genre, .bantuan {
     white-space: nowrap;
+}
+
+.genre__arrow, .bantuan__arrow {
+    display: none;
 }
 
 .bantuan {
@@ -342,17 +425,27 @@ footer {
         gap: 12px;
         font-size: var(--caption2-font-size);
     }
-    
-    .nav__profile {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
 
     .nav__profile img {
         width: 20px;
         height: 20px;
     }
+
+    .dropdown__menu {
+        top: 42px;
+        right: 20px;
+        width: 113px;
+        height: 104px;
+        font-size: var(--caption2-font-size);
+        font-weight: var(--font-lg-medium);
+        line-height: 14px;
+        padding: 0px;
+    }
+
+    .dropdown__menu li {
+        padding: 8px 12px;
+    }
+
     main {
         padding-top: 56px;
     }
@@ -426,14 +519,26 @@ footer {
         gap: 20px;
     }
     
+    .movie__container {
+        display: flex;
+        gap: 16px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
     .movie__landscape {
         width: 309px;
         height: 151px;
     }
 
+    .continue__card {
+        display: flex;
+        gap: 16px;
+    }
+
     .movie__potrait {
-        width: 95.6px;
-        height: 143.39px;
+        width: 95px;
+        height: 145px;
     }
     
     .top__badge {
@@ -456,6 +561,10 @@ footer {
         height: 13px;
     }
 
+    .arrow__left, .arrow__right {
+        display: none;
+    }
+
     footer {
         flex-direction: column;
         padding: 20px;
@@ -463,16 +572,42 @@ footer {
 
     .title {
         margin-right: 0;
+        margin-bottom: 40px;
+    }
+
+    .title__logo {
+        gap: 3px;
+        margin-bottom: 16px;
     }
 
     .genre, .bantuan {
         margin: 0;
     }
 
+    .genre h3, .bantuan h3 {
+        margin-bottom: 0px;
+    }
+
+    .genre__list, .bantuan__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .genre__arrow, .bantuan__arrow {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        margin-left: auto;
+    }
+
+    .title__logo:first-child .menu__logo-img {
+        font-size: var(--h4-font-size); 
+    }
+
     .title h1 {
         font-size: var(--h4-font-size);
         margin: 0;
-        margin-bottom: 16px;
     }
 
     .title p {

@@ -24,6 +24,11 @@
             <div class="nav__profile">
                 <img src="../public/images/profile.png" alt="Profile">
                 <i class="ri-arrow-down-s-line"></i>
+                <ul class="dropdown__menu">
+                    <li><i class="ri-user-line"></i> Profil Saya</li>
+                    <li><i class="ri-star-line"></i> Ubah Premium</li>
+                    <li><i class="ri-logout-box-line"></i> Keluar</li>
+                </ul>
             </div>
         </nav>
     </header>
@@ -53,6 +58,7 @@
             <h2>Melanjutkan Tonton Film</h2>
             <div class="movie__container">
                 <div class="movie__landscape" style="background-image: url('../public/images/dontlookup.png');">
+                    <button><i class="ri-arrow-left-line arrow__left"></i></button>
                     <div class="card__title">
                         <span class="card__title-text">Don't Look Up</span>
                         <span class="card__title-rating">⭐ 4.5/5</span>
@@ -74,6 +80,7 @@
                 </div>
                 
                 <div class="movie__landscape" style="background-image: url('../public/images/amancalledotto.png');">
+                    <button><i class="ri-arrow-right-line arrow__right"></i></button>
                     <div class="card__title">
                         <span class="card__title-text">A Man Called Otto</span>
                         <span class="card__title-rating">⭐ 4.4/5</span>
@@ -86,6 +93,7 @@
             <h2>Top Rating dan Film Hari ini</h2>
             <div class="continue__card">
                 <div class="movie__potrait" style="background-image: url('../public/images/suzume.png');">
+                    <button><i class="ri-arrow-left-line arrow__left"></i></button>
                     <div class="new__badge">Episode Baru</div>
                 </div>
     
@@ -102,7 +110,7 @@
                 </div>
                 
                 <div class="movie__potrait" style="background-image: url('../public/images/bigh6.png');">
-                    
+                    <button><i class="ri-arrow-right-line arrow__right"></i></button>
                 </div>
             </div>
         </section>
@@ -111,6 +119,7 @@
             <h2>Film Trending</h2>
             <div class="continue__card">
                 <div class="movie__potrait" style="background-image: url('../public/images/ttw.png');">
+                    <button><i class="ri-arrow-left-line arrow__left"></i></button>
                     <div class="top__badge">Top <br/> 10</div>
                 </div>
     
@@ -127,6 +136,7 @@
                 </div>
                 
                 <div class="movie__potrait" style="background-image: url('../public/images/litlemermaid.png');">
+                    <button><i class="ri-arrow-right-line arrow__right"></i></button>
                     <div class="top__badge">Top <br/> 10</div>
                 </div>
             </div>
@@ -136,6 +146,7 @@
             <h2>Rilis Baru</h2>
             <div class="continue__card">
                 <div class="movie__potrait" style="background-image: url('../public/images/litlemermaid.png');">
+                    <button><i class="ri-arrow-left-line arrow__left"></i></button>
                     <div class="top__badge">Top <br/> 10</div>
                 </div>
     
@@ -159,36 +170,45 @@
     </main>
     <footer>
         <div class="title">
-            <h1>CHILL</h1>
+            <div class="title__logo">
+                <i class="ri-clapperboard-line menu__logo-img"></i>
+                <h1>CHILL</h1>
+            </div>
             <p>&copy; 2023 CHILL All Rights Reserved.</p>
         </div>
-        <div class="genre">
-            <h3>Genre</h3>
-            <ul>
-                <li>Aksi</li>
-                <li>Anak-anak</li>
-                <li>Anime</li>
-                <li>Britania</li>
-                <li>Drama</li>
-                <li>Fantasi Ilmiah & Fantasi</li>
-                <li>Kejahatan</li>
-                <li>KDrama</li>
-                <li>Komedi</li>
-                <li>Petualangan</li>
-                <li>Perang</li>
-                <li>Romantis</li>
-                <li>Sains & Alam</li>
-                <li>Thriller</li>
-            </ul>
+        <div class="genre__list">
+            <div class="genre">
+                <h3>Genre</h3>
+                <ul>
+                    <li>Aksi</li>
+                    <li>Anak-anak</li>
+                    <li>Anime</li>
+                    <li>Britania</li>
+                    <li>Drama</li>
+                    <li>Fantasi Ilmiah & Fantasi</li>
+                    <li>Kejahatan</li>
+                    <li>KDrama</li>
+                    <li>Komedi</li>
+                    <li>Petualangan</li>
+                    <li>Perang</li>
+                    <li>Romantis</li>
+                    <li>Sains & Alam</li>
+                    <li>Thriller</li>
+                </ul>
+            </div>
+            <i class="ri-arrow-right-s-line genre__arrow"></i>
         </div>
-        <div class="bantuan">
-            <h3>Bantuan</h3>
-            <ul>
-                <li>FAQ</li>
-                <li>Kontak Kami</li>
-                <li>Privasi</li>
-                <li>Syarat & Ketentuan</li>
-            </ul>
+        <div class="bantuan__list">
+            <div class="bantuan">
+                <h3>Bantuan</h3>
+                <ul>
+                    <li>FAQ</li>
+                    <li>Kontak Kami</li>
+                    <li>Privasi</li>
+                    <li>Syarat & Ketentuan</li>
+                </ul>
+            </div>
+            <i class="ri-arrow-right-s-line bantuan__arrow"></i>
         </div>
     </footer>
 </body>
