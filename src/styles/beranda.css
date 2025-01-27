@@ -106,7 +106,7 @@ nav {
 
 main {
     padding-top: 94px;
-    background-color: var(--other-paper-bg);
+    background-color: var(--other-page-header-bg);
     position: relative;
     max-width: 100vw;
 }
@@ -335,7 +335,7 @@ footer {
     display: flex;
     max-width: 100vw;
     padding: 60px 80px;
-    justify-content: space-between;
+    justify-content: flex-start;
     border-top: 1px solid var(--other-outline-border);
 }
 
@@ -361,7 +361,7 @@ footer {
 }
 
 .title p {
-    margin: 5px 0 0;
+    margin: 16px 0 0;
     font-size: var(--body-md-font-size);
     font-weight: var(--font-medium);
 }
@@ -374,7 +374,7 @@ footer {
     display: none;
 }
 
-.bantuan {
+.bantuan__list {
     margin-left: auto;
 }
 
@@ -571,6 +571,7 @@ footer {
     .title {
         margin-right: 0;
         margin-bottom: 40px;
+        margin-bottom: 0px;
     }
 
     .title__logo {
@@ -619,5 +620,9 @@ footer {
 
     .genre li, .bantuan li {
         display: none;
+    }
+    
+    .bantuan__list {
+        margin-left: 0px;
     }
 }
