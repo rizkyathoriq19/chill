@@ -218,8 +218,7 @@ main {
 }
 .movie__container {
     display: flex;
-    justify-content: flex-start;
-    gap: 40px;
+    justify-content: space-between;
     position: relative;
 }
 
@@ -252,13 +251,12 @@ main {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: 16px;
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
     background: linear-gradient(to bottom, 
         hsla(0, 0%, 0%, 0), 
-        hsla(210, 8%, 7%, 0.86), 
-        hsla(210, 8%, 10%, 1));
+        hsla(0, 0%, 0%, 0.5))
 }
 
 
